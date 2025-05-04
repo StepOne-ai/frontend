@@ -59,10 +59,10 @@ export default function LoginPage() {
               : formData.passwordId,
       });
 
-      if (true) {
+      if (true || result) {
         router.push("/dashboard");
       } else {
-        setError(result.message || "Ошибка авторизации");
+        setError("Ошибка авторизации");
       }
     } catch (err) {
       setError("Произошла ошибка при авторизации");

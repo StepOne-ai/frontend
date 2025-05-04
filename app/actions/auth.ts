@@ -1,7 +1,5 @@
 "use server";
 
-import { redirect } from "next/navigation";
-
 type LoginMethod = "email" | "phone" | "patientId";
 
 interface LoginData {
@@ -15,7 +13,7 @@ interface LoginData {
 export async function login(data: LoginData) {
   // В реальном приложении здесь будет проверка учетных данных в базе данных
   // Для демонстрации просто имитируем успешную авторизацию
-
+  console.log(data);
   return { success: true };
 }
 
